@@ -1,0 +1,201 @@
+import { Meeting, MeetingType, MetricCardData } from '@/types';
+
+export const INITIAL_METRICS: MetricCardData[] = [
+  {
+    id: 'm1',
+    title: 'Upcoming Meetings',
+    value: '8',
+    trend: '12%',
+    trendType: 'up',
+    period: 'vs yesterday',
+    iconType: 'calendar',
+    iconBgColor: 'bg-emerald-50 text-emerald-700',
+  },
+  {
+    id: 'm2',
+    title: 'Pending Invitations',
+    value: '3',
+    trend: '8%',
+    trendType: 'up',
+    period: 'vs yesterday',
+    iconType: 'users',
+    iconBgColor: 'bg-amber-50 text-amber-600',
+  },
+  {
+    id: 'm3',
+    title: 'Hours Booked',
+    value: '24.5',
+    trend: '18%',
+    trendType: 'up',
+    period: 'vs last week',
+    iconType: 'clock',
+    iconBgColor: 'bg-teal-50 text-teal-600',
+  },
+  {
+    id: 'm4',
+    title: 'Revenue',
+    value: '₹24,680',
+    trend: '15%',
+    trendType: 'up',
+    period: 'vs last month',
+    iconType: 'revenue',
+    iconBgColor: 'bg-amber-100 text-amber-800',
+  },
+];
+
+export const INITIAL_MEETINGS: Meeting[] = [
+  {
+    id: 'meet-1',
+    title: 'Design Review',
+    subtitle: 'Team Sync',
+    time: '09:30 AM',
+    dateLabel: 'Today',
+    dateIso: '2025-05-20',
+    platform: 'google-meet',
+    joinUrl: 'https://meet.google.com/abc-defg-hij',
+    colorDot: 'bg-emerald-500',
+    attendees: [
+      { id: 'u1', name: 'Alex Johnson', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80' },
+      { id: 'u2', name: 'Marcus Chen', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80' },
+    ],
+    extraAttendeesCount: 2,
+  },
+  {
+    id: 'meet-2',
+    title: 'Product Demo',
+    subtitle: 'Acme Corporation',
+    time: '11:00 AM',
+    dateLabel: 'Today',
+    dateIso: '2025-05-20',
+    platform: 'zoom',
+    joinUrl: 'https://zoom.us/j/123456789',
+    colorDot: 'bg-blue-500',
+    attendees: [
+      { id: 'u3', name: 'Sarah Jenkins', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80' },
+    ],
+  },
+  {
+    id: 'meet-3',
+    title: 'Interview - UX Designer',
+    subtitle: 'Hiring Team',
+    time: '02:30 PM',
+    dateLabel: 'Today',
+    dateIso: '2025-05-20',
+    platform: 'teams',
+    joinUrl: 'https://teams.microsoft.com/l/meetup-join/123',
+    colorDot: 'bg-indigo-500',
+    attendees: [
+      { id: 'u4', name: 'David Kim', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80' },
+    ],
+  },
+  {
+    id: 'meet-4',
+    title: 'Sales Call',
+    subtitle: 'Global Solutions',
+    time: '04:00 PM',
+    dateLabel: 'Today',
+    dateIso: '2025-05-20',
+    platform: 'google-meet',
+    joinUrl: 'https://meet.google.com/xyz-uvwx-rst',
+    colorDot: 'bg-teal-500',
+    attendees: [
+      { id: 'u5', name: 'Elena Rostova', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80' },
+      { id: 'u6', name: 'James Wilson', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80' },
+    ],
+    extraAttendeesCount: 1,
+  },
+];
+
+export const INITIAL_MEETING_TYPES: MeetingType[] = [
+  {
+    id: 'mt-1',
+    title: '30 Min Consultation',
+    duration: '30 mins',
+    type: 'One-on-One',
+    link: 'https://meetplan.com/aditya/30min-consult',
+    iconType: 'video',
+    bgColor: 'bg-emerald-50 text-emerald-700 border-emerald-100',
+    iconColor: 'text-emerald-700',
+  },
+  {
+    id: 'mt-2',
+    title: '60 Min Strategy Call',
+    duration: '60 mins',
+    type: 'One-on-One',
+    link: 'https://meetplan.com/aditya/60min-strategy',
+    iconType: 'strategy',
+    bgColor: 'bg-amber-50 text-amber-600 border-amber-100',
+    iconColor: 'text-amber-600',
+  },
+  {
+    id: 'mt-3',
+    title: 'Quick Demo',
+    duration: '30 mins',
+    type: 'Group',
+    link: 'https://meetplan.com/aditya/quick-demo',
+    iconType: 'demo',
+    bgColor: 'bg-blue-50 text-blue-600 border-blue-100',
+    iconColor: 'text-blue-600',
+  },
+  {
+    id: 'mt-4',
+    title: 'Interview Session',
+    duration: '45 mins',
+    type: 'One-on-One',
+    link: 'https://meetplan.com/aditya/interview-session',
+    iconType: 'interview',
+    bgColor: 'bg-rose-50 text-rose-600 border-rose-100',
+    iconColor: 'text-rose-600',
+  },
+];
+
+export const MOCK_GOOGLE_CALENDAR_EVENTS: Meeting[] = [
+  {
+    id: 'gcal-1',
+    title: 'Quarterly OKR Review',
+    subtitle: 'Google Calendar • Executive Team',
+    time: '10:00 AM',
+    dateLabel: 'Tomorrow',
+    dateIso: '2025-05-21',
+    platform: 'google-meet',
+    joinUrl: 'https://meet.google.com/okr-rev-2025',
+    colorDot: 'bg-emerald-600',
+    isGoogleSynced: true,
+    attendees: [
+      { id: 'gu1', name: 'Google Workspace Sync', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80' },
+      { id: 'gu2', name: 'Product Lead', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80' }
+    ],
+    extraAttendeesCount: 3,
+  },
+  {
+    id: 'gcal-2',
+    title: 'Client Onboarding Sync',
+    subtitle: 'Google Calendar • Gharpadharo Tech',
+    time: '01:15 PM',
+    dateLabel: 'Tomorrow',
+    dateIso: '2025-05-21',
+    platform: 'google-meet',
+    joinUrl: 'https://meet.google.com/onb-syn-2025',
+    colorDot: 'bg-emerald-600',
+    isGoogleSynced: true,
+    attendees: [
+      { id: 'gu3', name: 'Engineering Lead', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80' }
+    ],
+  },
+  {
+    id: 'gcal-3',
+    title: 'Frontend Architecture Sync',
+    subtitle: 'Google Calendar • Core Dev Team',
+    time: '05:00 PM',
+    dateLabel: 'Tomorrow',
+    dateIso: '2025-05-21',
+    platform: 'google-meet',
+    joinUrl: 'https://meet.google.com/fee-arch-2025',
+    colorDot: 'bg-emerald-600',
+    isGoogleSynced: true,
+    attendees: [
+      { id: 'gu4', name: 'Tech Lead', avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80' }
+    ],
+    extraAttendeesCount: 4,
+  }
+];
